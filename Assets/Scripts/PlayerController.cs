@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
         transform.Translate(horizontalInput * speed * Time.deltaTime * Vector3.right);
 
         // [5] keep the player inbounds
-        // if (transform.position.x < -10)
-        // {
-        //     transform.position = new Vector3(-10, transform.position.y, transform.position.z);
-        // }
+         if (transform.position.x < -10)
+         {
+             transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+         }
 
         // [7] keep the player inbounds using xRange variable
         if (transform.position.x < -xRange)
